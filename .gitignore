@@ -6,6 +6,7 @@ packages/*/legacy/dist
 .idea
 .DS_Store
 .history
+storybook-static
 build
 docs
 /dist
