@@ -1,11 +1,13 @@
 {
   "name": "troy-ai-plugins",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postgit": "npm run build && npm version patch && npm publish && git push",
+    "start": "pm2 start ./server/server.js --name=troy-ai-plugins"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,10 @@
     "antd": "^5.0.6",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "echarts": "^5.5.0",
+    "echarts-for-react": "^3.0.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.20",
@@ -25,9 +31,19 @@
     "@storybook/react-vite": "^7.6.20",
     "@storybook/test": "^7.6.20",
     "antd": "^5.18.3",
+    "less": "^4.2.0",
+    "less-loader": "^8.1.1",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "storybook": "^7.6.20"
+    "storybook": "^7.6.20",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "lint-staged": {
+    "stories/**/*.{ts,tsx,scss,js,css,md,less}": [
+      "prettier --write ."
+    ]
   }
 }
