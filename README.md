@@ -1,6 +1,6 @@
-# 创意通用组件库 Troyfe-component
+# ai-component
 
-## Troyfe-component
+## ai-component
 
 ### install
 
