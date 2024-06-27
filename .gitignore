@@ -1,0 +1,12 @@
+node_modules
+coverage
+packages/*/lib
+packages/*/legacy/dist
+.vscode
+.idea
+.DS_Store
+.history
+build
+docs
+/dist
+yarn.lock
